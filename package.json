@@ -1,0 +1,14 @@
+{
+  "name": "apm-nodejs-test",
+  "version": "1.0.0",
+  "description": "Stuff",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "elastic-apm": "^0.3.0"
+  }
+}
