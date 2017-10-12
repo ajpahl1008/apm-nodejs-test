@@ -1,5 +1,5 @@
 var apm = require('elastic-apm').start({
-    appName: 'apm-nodejs-test',
+    appName: 'app-single-service',
     secretToken: '',
     serverUrl: 'http://localhost:8200'
 })
