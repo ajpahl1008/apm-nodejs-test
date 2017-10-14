@@ -1,33 +1,52 @@
 # apm-nodejs-test
 Simple NodeJS app that feeds maddog
 
-# Setup
-After you've cloned this repo...
-- execute: npm install 
+Clone this repo and setup all the libraries via npm
+```
+# git clone https://github.com/ajpahl1008/apm-nodejs-test.git
+# cd apm-nodejs-test
+# npm install
+```
 
 # Single Service Instruction
-======================================
-- execute: node app-single-service.js
-...in a separate terminal...
-- execute: curl localhost:3000/
-Should get: Service Available
+Execute The following to start the single service
+```
+# node app-single-service.js
+# curl localhost:3000/
+```
+
+Expected Response: Service Available
 
 ======================================
 # Multiple Service Instruction
-- execute: node app-multi-service.js
+Execute the folowing to start the multiple service javascript
+```
+# node app-multi-service.js
+```
 
 ...in a separate terminal...
--execute: curl localhost:3000/login
-Should get: Welcome to Awesome!!
+```
+# curl localhost:3000/login
+```
+Expected Response: Welcome to Awesome!!
 
--execute: curl localhost:3000/reviewCart
-Should get: You have no items.  Go pick stuff!!!
+```
+# curl localhost:3000/reviewCart
+```
+Expected Response: You have no items.  Go pick stuff!!!
 
--execute: curl localhost:3000/submitOrder
-Should get: Order is on the way!
--execute: curl localhost:3000/badStuff
-Should get: Well that was not good...
-AND...
-In the terminal with the app
-logging error <GENERATED UUID> with Elastic APM
+```
+# curl localhost:3000/submitOrder
+```
+Expected Response: Order is on the way!
 
+```
+# curl localhost:3000/badStuff
+```
+Expected Response: Well that was not good...
+AND
+In the terminal where app-single-service is running...
+
+```
+logging error `<Generated UUID>` with Elastic APM
+```
