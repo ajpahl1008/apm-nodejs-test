@@ -55,7 +55,7 @@ app.get('/login', function (req, res) {
     var randomSleepTime = getRandomSleepTime(1,2000);
     sleep(randomSleepTime);
     var responseCode = getRandomResponseCode();
-    console.log("SubmitOrder: ResponseCode: " + responseCode + " Synth Delay Time: " + randomSleepTime );
+    console.log("Login: ResponseCode: " + responseCode + " Synth Delay Time: " + randomSleepTime );
     res.status(responseCode).send('Welcome to Awesome!!!\n')
     apm.endTransaction()
 })
@@ -63,7 +63,7 @@ app.get('/login', function (req, res) {
 app.get('/badStuff', function (req, res) {
     apm.startTransaction("Login", "HTTP");
     try {
-      adddlert("ThisWillNotWork");
+      adddlert("ThisMethodWillNotWork");
     }
     catch(err) {
       apm.captureError('Fake but sort of real Exception Occured!')
