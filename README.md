@@ -1,3 +1,16 @@
+
+# Requirements
+The following packages will make life easy for you if you're on a Mac.
+```
+brew (get it here: https://brew.sh/)
+node (#brew install node)
+watch (#brew install watch)
+```
+The following packages will make life easy for you if you're on a PC.
+```
+Coming soon...
+```
+
 # apm-nodejs-test
 Simple NodeJS app that feeds maddog
 
