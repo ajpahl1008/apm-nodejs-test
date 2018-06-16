@@ -1,7 +1,7 @@
-var apm = require('elastic-apm').start({
-    appName: 'app-multi-service',
+var apm = require('elastic-apm-node').start({
+    serviceName: 'app-multi-service',
     secretToken: '',
-    serverUrl: 'http://localhost:8200'
+    serverUrl: 'http://192.168.0.214:8200'
 })
 
 var app = require('express')()
@@ -28,10 +28,10 @@ function getRandomSleepTime(min, max) {
 }
 
 // any errors caught by Express can be logged by the agent as well
-app.use(apm.middleware.express())
+//#app.use(apm.middleware.express())
 
 app.get('/reviewCart', function (req, res) {
-    apm.startTransaction("ReviewCart", "HTTP");
+    var transaction = apm.startTransaction("ReviewCart", "HTTP");
     var randomSleepTime = getRandomSleepTime(1,5000);
     sleep(randomSleepTime);
     var responseCode = getRandomResponseCode();
