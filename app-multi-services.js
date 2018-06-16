@@ -27,9 +27,6 @@ function getRandomSleepTime(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// any errors caught by Express can be logged by the agent as well
-//#app.use(apm.middleware.express())
-
 app.get('/reviewCart', function (req, res) {
     var transaction = apm.startTransaction("ReviewCart", "HTTP");
     var randomSleepTime = getRandomSleepTime(1,5000);
